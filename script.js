@@ -1,8 +1,9 @@
 fetch('data.json')
     .then(data => data.json())
     .then(data => {
-        let all_time_cards;
-        data.forEach((category) => {
+        let all_time_cards="";
+        console.log(data);
+        data.map((category) => {
             let slug = category.title.toLowerCase().replaceAll(" ", "-")
             let time_card = `
             <section 
@@ -10,7 +11,7 @@ fetch('data.json')
                 style="
                     background:${category.color};
                     background-image: url('images/icon-${slug}.svg');
-                    background-position: top -15px right 15px;
+                    background-position: top -10px right 15px;
                     background-repeat: no-repeat;
                 "
             >
