@@ -1,9 +1,99 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+}
+
+body {
+  background: hsl(226deg, 43%, 10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  max-width: 330px;
+  width: 100%;
+  margin-top: 80px;
+  display: grid;
+  grid-gap: 30px;
+}
+main section.user-card {
+  background: hsl(235deg, 46%, 20%);
+  border-radius: 15px;
+}
+main section.user-card .user {
+  padding: 30px;
+  background: hsl(246deg, 80%, 60%);
+  border-radius: 15px;
+  display: flex;
+  color: white;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+main section.user-card .user img {
+  height: 70px;
+  border-radius: 100%;
+  border: 3px solid white;
+  margin-right: 15px;
+}
+main section.user-card .user p {
+  color: hsl(236deg, 100%, 87%);
+}
+main section.user-card .user h1 {
+  font-weight: 300;
+}
+main section.user-card .time-period {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
+}
+main section.user-card .time-period a {
+  color: hsl(235deg, 45%, 61%);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+main section.user-card .time-period a.active {
+  color: white;
+}
+main section.time-card {
+  background: hsl(15deg, 100%, 70%);
+  border-radius: 15px;
+  background-image: url("images/icon-work.svg");
+  background-position: top -15px right 15px;
+  background-repeat: no-repeat;
+}
+main section.time-card .content {
+  background: hsl(235deg, 46%, 20%);
+  margin-top: 40px;
+  border-radius: 15px;
+  padding: 35px 30px;
+  color: white;
+}
+main section.time-card .content .title, main section.time-card .content .data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.time-card .content .title h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+main section.time-card .content .title img {
+  width: 25px;
+}
+main section.time-card .content .data {
+  margin-top: 5px;
+}
+main section.time-card .content .data .current-hours {
+  font-size: 2rem;
+  font-weight: 200;
+}
+main section.time-card .content .data .previous-hours {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 0.95rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
