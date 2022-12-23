@@ -93,20 +93,26 @@ main section.user-card .time-period a.active {
 @media (min-width: 600px) {
   main section.user-card .time-period a {
     margin: 10px 0;
+    transition: color 0.2s;
+  }
+  main section.user-card .time-period a:hover {
+    color: hsl(236deg, 100%, 87%);
   }
 }
 main .time-card-container {
   display: grid;
   grid-gap: 30px;
+  margin-top: 30px;
 }
 @media (min-width: 600px) {
   main .time-card-container {
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
   }
 }
 main .time-card-container section.time-card {
   background: hsl(246deg, 80%, 60%);
-  border-radius: 15px;
+  border-radius: 15px 15px 50px 50px;
   background-position: top -10px right 15px;
   background-repeat: no-repeat;
 }
@@ -120,6 +126,11 @@ main .time-card-container section.time-card .content {
 @media (min-width: 600px) {
   main .time-card-container section.time-card .content {
     padding: 30px;
+    transition: background 0.2s;
+  }
+  main .time-card-container section.time-card .content:hover {
+    background: #292f70;
+    cursor: pointer;
   }
 }
 main .time-card-container section.time-card .content .title, main .time-card-container section.time-card .content .data {
@@ -138,6 +149,13 @@ main .time-card-container section.time-card .content .title h2 {
 }
 main .time-card-container section.time-card .content .title img {
   width: 25px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+@media (min-width: 600px) {
+  main .time-card-container section.time-card .content .title img:hover {
+    opacity: 1;
+  }
 }
 main .time-card-container section.time-card .content .data {
   margin-top: 5px;
@@ -146,7 +164,7 @@ main .time-card-container section.time-card .content .data {
   main .time-card-container section.time-card .content .data {
     flex-direction: column;
     align-items: start;
-    margin-top: 35px;
+    margin-top: 30px;
   }
 }
 main .time-card-container section.time-card .content .data .current-hours {
