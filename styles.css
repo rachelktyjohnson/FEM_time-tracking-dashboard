@@ -17,8 +17,6 @@ main {
   max-width: 330px;
   width: 100%;
   margin-top: 80px;
-  display: grid;
-  grid-gap: 30px;
 }
 main section.user-card {
   background: hsl(235deg, 46%, 20%);
@@ -58,40 +56,43 @@ main section.user-card .time-period a {
 main section.user-card .time-period a.active {
   color: white;
 }
-main section.time-card {
-  background: hsl(15deg, 100%, 70%);
+main .time-card-container {
+  display: grid;
+  grid-gap: 30px;
+}
+main .time-card-container section.time-card {
+  background: hsl(246deg, 80%, 60%);
   border-radius: 15px;
-  background-image: url("images/icon-work.svg");
   background-position: top -15px right 15px;
   background-repeat: no-repeat;
 }
-main section.time-card .content {
+main .time-card-container section.time-card .content {
   background: hsl(235deg, 46%, 20%);
   margin-top: 40px;
   border-radius: 15px;
   padding: 35px 30px;
   color: white;
 }
-main section.time-card .content .title, main section.time-card .content .data {
+main .time-card-container section.time-card .content .title, main .time-card-container section.time-card .content .data {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main section.time-card .content .title h2 {
+main .time-card-container section.time-card .content .title h2 {
   font-size: 1.2rem;
   font-weight: 400;
 }
-main section.time-card .content .title img {
+main .time-card-container section.time-card .content .title img {
   width: 25px;
 }
-main section.time-card .content .data {
+main .time-card-container section.time-card .content .data {
   margin-top: 5px;
 }
-main section.time-card .content .data .current-hours {
+main .time-card-container section.time-card .content .data .current-hours {
   font-size: 2rem;
   font-weight: 200;
 }
-main section.time-card .content .data .previous-hours {
+main .time-card-container section.time-card .content .data .previous-hours {
   color: hsl(236deg, 100%, 87%);
   font-size: 0.95rem;
 }
